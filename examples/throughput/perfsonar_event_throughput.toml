@@ -1,0 +1,42 @@
+[config]
+data_source = "perfsonar-banda(BBR)"
+data_description="Teste de Banda BBR..."
+sep=";"
+id_sufix=11001
+# sufix
+# <banda bbr id><throughput id><run>
+#      1             1          001
+pop_id = [
+    "ac", "al", "ap", "am", "ba", "ce",
+    "es", "go", "ma", "mt", "ms", "mg",
+    "pa", "pb", "pr", "pe", "pi", "rj",
+    "rn", "rs", "ro", "rr", "sc", "sp",
+    "se", "to", "df"
+]
+
+
+[v_1]
+order = ["date-time", "latitude", "longitute", "throughput", "pop-src", "pop-dst"]
+
+[[v_1.cols]]
+type="date_time"
+format="YYYY-mm-dd HH:MM:SS"
+
+[[v_1.cols]]
+type="double"
+minvalue = -85.0
+maxvalue = 85.0
+
+[[v_1.cols]]
+type="double"
+minvalue = -179.9
+maxvalue = 180.0
+
+[[v_1.cols]]
+type = "float"
+
+[[v_1.cols]]
+type = "string"
+
+[[v_1.cols]]
+type = "string"

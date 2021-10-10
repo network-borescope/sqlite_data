@@ -1,0 +1,85 @@
+[config]
+data_source="dns"
+data_description="Le os pacotes DNS e forma pares (request, response) com o objetivo de fazer uma totalizacao por CLIENTE"
+sep=";"
+id=9003
+
+[v_1]
+order = [
+    "date-time", "latitude",
+    "longitute", "pop_id",
+    "client_id", "ttl_pior_ip",
+    "total_req_feitas", "total_req_feitas_nresp",
+    "total_req_recebidas", "total_req_recebidas_nresp",
+    "total_req_feitas_pior_src", "total_req_feitas_pior_src_nresp",
+    "total_req_recebidas_pior_dst", "total_req_recebidas_pior_dst_nresp",
+    "pior_src", "pior_dst"]
+
+[[v_1.cols]]
+#name="date-time"
+type="date_time"
+format="YYYY-mm-dd HH:MM:SS"
+
+[[v_1.cols]]
+#name="latitude"
+type="double"
+minvalue = -85.0
+maxvalue = 85.0
+
+[[v_1.cols]]
+#name="longitude"
+type="double"
+minvalue = -179.9
+maxvalue = 180.0
+
+[[v_1.cols]]
+#name="pop_id"
+type = "int"
+
+[[v_1.cols]]
+#name="client_id"
+type = "int"
+
+[[v_1.cols]]
+#name="ttl_pior_ip"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_feitas"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_feitas_nresp"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_recebidas"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_recebidas_nresp"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_feitas_pior_src"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_feitas_pior_src_nresp"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_recebidas_pior_dst"
+type = "int"
+
+[[v_1.cols]]
+#name="total_req_recebidas_pior_dst_nresp"
+type = "int"
+
+[[v_1.cols]]
+#name="pior_src"
+type = "string"
+
+[[v_1.cols]]
+#name="pior_dst"
+type = "string"
